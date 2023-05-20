@@ -17,7 +17,7 @@ const DeleteAvatarButton: React.FC<Properties> = ({ deleteFile }) => {
             type={ButtonType.BUTTON}
             onClick={deleteFile}
         >
-            Delete Avatar
+            Видалити аватар
         </Button>
     );
 };

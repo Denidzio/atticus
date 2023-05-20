@@ -50,7 +50,7 @@ const SignInForm: React.FC<Properties> = ({ onSubmit }) => {
                 <Input
                     type={InputType.EMAIL}
                     label="E-mail"
-                    placeholder="E-mail address"
+                    placeholder="E-mail адреса"
                     name="email"
                     control={control}
                     errors={errors}
@@ -60,8 +60,8 @@ const SignInForm: React.FC<Properties> = ({ onSubmit }) => {
             <p className={styles.inputWrapper}>
                 <Input
                     type={InputType.PASSWORD}
-                    label="Password"
-                    placeholder="Password"
+                    label="Пароль"
+                    placeholder="Пароль"
                     name="password"
                     control={control}
                     errors={errors}
@@ -74,7 +74,7 @@ const SignInForm: React.FC<Properties> = ({ onSubmit }) => {
                 className={styles.button}
                 type={ButtonType.SUBMIT}
             >
-                Log In
+                Ввійти
             </Button>
         </form>
     );

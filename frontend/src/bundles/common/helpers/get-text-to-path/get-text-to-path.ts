@@ -4,18 +4,18 @@ const getText = (pathname: string, type: string): string => {
     type Properties = Record<string, string>;
 
     const titles: Properties = {
-        [AppRoute.ROOT]: 'Log In',
-        [AppRoute.SIGN_UP]: 'Sign Up',
+        [AppRoute.ROOT]: 'Ввійти',
+        [AppRoute.SIGN_UP]: 'Зареєструватись',
     };
 
     const authText: Properties = {
-        [AppRoute.ROOT]: 'No account?',
-        [AppRoute.SIGN_UP]: 'Have an account?',
+        [AppRoute.ROOT]: 'Немає облікового запису?',
+        [AppRoute.SIGN_UP]: 'Є обліковий запис?',
     };
 
     const authLink: Properties = {
-        [AppRoute.ROOT]: 'Sign Up',
-        [AppRoute.SIGN_UP]: 'Log In',
+        [AppRoute.ROOT]: 'Зареєструватись',
+        [AppRoute.SIGN_UP]: 'Ввійти',
     };
 
     switch (type) {

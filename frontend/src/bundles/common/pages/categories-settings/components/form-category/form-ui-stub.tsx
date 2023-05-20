@@ -22,7 +22,7 @@ const FormUiStub: React.FC<Properties> = ({ onClick, handleKeyDown }) => {
         >
             <div className={styles.wrapperSettings}>
                 <div className={styles.wrapperSelect}>
-                    <span className={styles.inputLabel}>Icon</span>
+                    <span className={styles.inputLabel}>Значок</span>
                     <div className={styles.dropdown}>
                         <span className={styles.dropdownColorIcon}>
                             <Icon name={FaIcons.CLOUD_ARROW_UP} />
@@ -33,7 +33,7 @@ const FormUiStub: React.FC<Properties> = ({ onClick, handleKeyDown }) => {
                     </div>
                 </div>
                 <div className={styles.wrapperSelect}>
-                    <span className={styles.inputLabel}>Color</span>
+                    <span className={styles.inputLabel}>Колір</span>
                     <div className={styles.dropdown}>
                         <span className={styles.dropdownColorIcon}>
                             <Icon name={FaIcons.STOP} />
@@ -44,17 +44,17 @@ const FormUiStub: React.FC<Properties> = ({ onClick, handleKeyDown }) => {
                     </div>
                 </div>
                 <div className={styles.wrapperSelect}>
-                    <span className={styles.inputLabel}>Name</span>
+                    <span className={styles.inputLabel}>Назва</span>
                     <div className={styles.dropdown}>
                         <span className={styles.inputLabel}>
-                            New category name
+                            Назва категорії
                         </span>
                     </div>
                 </div>
                 <div className={styles.wrapperSelect}>
-                    <span className={styles.inputLabel}>Type</span>
+                    <span className={styles.inputLabel}>Тип</span>
                     <div className={styles.dropdown}>
-                        <span className={styles.inputLabel}>Choose type</span>
+                        <span className={styles.inputLabel}>Виберіть тип</span>
                         <span className={styles.dropdownArrowIcon}>
                             <Icon name={FaIcons.CHEVRON_DOWN} />
                         </span>

@@ -136,28 +136,28 @@ const BudgetModal: React.FC<Properties> = ({
             onSubmit={handleFormSubmit as () => void}
             Header={
                 <p className={styles.header}>
-                    {isEdit ? 'Edit Budget' : 'Create new Budget'}
+                    {isEdit ? 'Редагувати бюджет' : 'Створити новий бюджет'}
                 </p>
             }
             Body={
                 <div className={styles.formWrapper}>
-                    <p className={styles.title}>General Info</p>
+                    <p className={styles.title}>Загальна інформація</p>
                     <div className={styles.wrapperHalf}>
                         <Input
                             labelClassName={styles.label}
                             control={control}
-                            label={'Budget name'}
-                            name={'name'}
-                            placeholder={'Enter budget name'}
+                            label="Назва бюджету"
+                            name="name"
+                            placeholder="Введіть назву бюджета"
                             errors={errors}
                         />
                         <Input
                             labelClassName={styles.label}
                             control={control}
                             errors={errors}
-                            label={'Amount'}
-                            name={'amount'}
-                            placeholder={'0.00'}
+                            label="Сума"
+                            name="amount"
+                            placeholder="0.00"
                         />
                     </div>
                     {/*maybe it will be used in the future}*/}
@@ -166,7 +166,7 @@ const BudgetModal: React.FC<Properties> = ({
                     {/*    control={control}*/}
                     {/*    render={RenderCurrency}*/}
                     {/*/>*/}
-                    <p className={styles.title}>Filters</p>
+                    <p className={styles.title}>Фільтри</p>
                     <div className={styles.wrapperHalf}>
                         <Controller
                             name="categories"
@@ -175,8 +175,8 @@ const BudgetModal: React.FC<Properties> = ({
                         />
                     </div>
                     <div>
-                        <p className={styles.title}>Budget Period</p>
-                        <span className={styles.label}>Recurrence</span>
+                        <p className={styles.title}>Період бюджетування</p>
+                        <span className={styles.label}>Повторюваність</span>
                         <Controller
                             name="recurrence"
                             control={control}
@@ -184,7 +184,9 @@ const BudgetModal: React.FC<Properties> = ({
                         />
                         <div className={styles.dates}>
                             <div className={styles.startDate}>
-                                <span className={styles.label}>Start date</span>
+                                <span className={styles.label}>
+                                    Дата початку
+                                </span>
                                 <Controller
                                     name="startDate"
                                     control={control}
@@ -208,7 +210,7 @@ const BudgetModal: React.FC<Properties> = ({
                     </div>
                 </div>
             }
-            submitButtonName={isEdit ? 'Save changes' : 'Create'}
+            submitButtonName={isEdit ? 'Зберегти зміни' : 'Створити'}
             disabled={
                 ((isEdit
                     ? editFields || !watch('categories')[0] || !watch('endDate')
@@ -226,7 +228,7 @@ const BudgetModal: React.FC<Properties> = ({
                     onClick={onClick}
                     className={styles.delete}
                 >
-                    Delete budget
+                    Видалити бюджет
                 </Button>
             )}
         </BaseModal>

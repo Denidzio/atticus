@@ -51,7 +51,7 @@ const DoughnutChartCard: React.FC<Properties> = ({
                         icon={FaIcons.MONEY_CHECK_DOLLAR}
                         iconSize={IconSize.ONE_HUNDRED}
                         margin={'30px auto'}
-                        body={'You have no expense transactions yet'}
+                        body="У вас ще немає транзакцій"
                     />
                 ) : (
                     <DoughnutChart categories={categories} />
@@ -86,8 +86,8 @@ const DoughnutChartCard: React.FC<Properties> = ({
                     >
                         <p className={styles.transactionNum}>
                             {category.count}
-                            {category.count === 1 && ' transaction'}
-                            {category.count != 1 && ' transactions'}
+                            {category.count === 1 && ' транзакція'}
+                            {category.count != 1 && ' транзакції'}
                         </p>
                         <p
                             className={classNames(

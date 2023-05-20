@@ -342,7 +342,7 @@ const WalletDetails: React.FC = () => {
                                     size={ButtonSize.MEDIUM}
                                     onClick={handleNavidation}
                                 >
-                                    Future
+                                    Майбутні
                                 </Button>
                             </div>
                         </div>
@@ -356,12 +356,12 @@ const WalletDetails: React.FC = () => {
                             )}
                         >
                             <div className={styles.filterText}>
-                                <h2>Filters</h2>
+                                <h2>Фільтри</h2>
                                 <button
                                     className={styles.reset}
                                     onClick={hangleReset}
                                 >
-                                    Reset filters
+                                    Скинути фільтри
                                 </button>
                             </div>
                             <div className={styles.applyFilters}>
@@ -376,28 +376,17 @@ const WalletDetails: React.FC = () => {
                                             handleChange={
                                                 handleCategoriesMultiDropdownChange
                                             }
-                                            label="By category"
+                                            label="За категорією"
+                                            placeholder="Вибрати..."
                                         />
                                     </div>
                                 </div>
-                                {/* <div className={styles.filter}>
-                                    <div className={styles.dropdown}>
-                                        <MultiDropdown
-                                            data={people}
-                                            selectedOption={peopleDropdown}
-                                            handleChange={
-                                                handlePeopleMultiDropdownChange
-                                            }
-                                            label="By people"
-                                        />
-                                    </div>
-                                </div> */}
                                 <div className={styles.filter}>
                                     <div className={styles.dropdown}>
                                         <Input
                                             type={InputType.TEXT}
-                                            label="By note"
-                                            placeholder="Filter by specific keyword"
+                                            label="За приміткою"
+                                            placeholder="Фільтрувати за ключовим словом"
                                             name="note"
                                             control={control}
                                             errors={errors}
@@ -412,7 +401,7 @@ const WalletDetails: React.FC = () => {
                                     )}
                                 >
                                     <span className={styles.categoryText}>
-                                        By amount
+                                        За сумою
                                     </span>
                                     <div className={styles.slider}>
                                         <RangeSlider
@@ -429,7 +418,7 @@ const WalletDetails: React.FC = () => {
                         <div className={styles.walletTransactionsContainer}>
                             <div className={styles.cards}>
                                 <CardTotal
-                                    title="Total Wallet Balance"
+                                    title="Загальний баланс гаманця"
                                     sum={
                                         (currentWallet?.balance as number) +
                                         getSpent(thisWalletTransactions)
@@ -440,7 +429,7 @@ const WalletDetails: React.FC = () => {
                                     }
                                 />
                                 <CardTotal
-                                    title="Total Period Change"
+                                    title="Загальна зміна за період"
                                     sum={getSpent(thisWalletTransactions)}
                                     variant={CardVariant.BLUE}
                                     currency={
@@ -448,7 +437,7 @@ const WalletDetails: React.FC = () => {
                                     }
                                 />
                                 <CardTotal
-                                    title="Total Period Income"
+                                    title="Загальний дохід за період"
                                     sum={getTotalPeriodAmount(
                                         thisWalletTransactions,
                                         'income',
@@ -459,7 +448,7 @@ const WalletDetails: React.FC = () => {
                                     }
                                 />
                                 <CardTotal
-                                    title="Total Period Expenses"
+                                    title="Загальні витрати за період"
                                     sum={getTotalPeriodAmount(
                                         thisWalletTransactions,
                                         'expense',
@@ -483,7 +472,7 @@ const WalletDetails: React.FC = () => {
                             ) : (
                                 <Placeholder
                                     path={DashboardPlaceholder}
-                                    body={'You have no transactions yet.'}
+                                    body="У вас ще немає транзакцій"
                                 />
                             )}
                             <TransactionModal
@@ -498,12 +487,12 @@ const WalletDetails: React.FC = () => {
                                 Header={
                                     <h2
                                         className={styles.modalTitle}
-                                    >{`You're about to delete ${
+                                    >{`Ви збираєтесь видалити ${
                                         isSelectedTransactions.length
-                                    } transaction${
+                                    } ${
                                         isSelectedTransactions.length > 1
-                                            ? 's'
-                                            : ''
+                                            ? 'транзакції'
+                                            : 'транзакцію'
                                     }`}</h2>
                                 }
                                 Body={
@@ -513,17 +502,19 @@ const WalletDetails: React.FC = () => {
                                                 styles.modalDetailsContainer
                                             }
                                         >
-                                            This change is irreversible. Do you
-                                            really want to delete{' '}
+                                            Ця зміна є незворотною. Ви дійсно
+                                            хочете{' '}
                                             {isSelectedTransactions.length > 1
-                                                ? 'them'
-                                                : 'it'}
-                                            ?
+                                                ? 'їх'
+                                                : 'її'}{' '}
+                                            видалити?
                                         </h4>
                                     </>
                                 }
-                                submitButtonName={`Delete transaction${
-                                    isSelectedTransactions.length > 1 ? 's' : ''
+                                submitButtonName={`Видалити ${
+                                    isSelectedTransactions.length > 1
+                                        ? 'транзакції'
+                                        : 'транзакцію'
                                 }`}
                                 submitButtonVariant={ButtonVariant.DELETE}
                                 footerContainerClass={styles.modalFooter}

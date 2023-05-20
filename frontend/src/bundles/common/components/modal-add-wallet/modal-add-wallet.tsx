@@ -152,15 +152,17 @@ const NewWalletModal: React.FC<Properties> = ({
             onClose={onClose}
             hasActionButtons={false}
             onSubmit={onSubmit}
-            Header={<span className={styles.title}>Create new Wallet</span>}
+            Header={
+                <span className={styles.title}>Cтворити новий гаманець</span>
+            }
             Body={
                 <form className={styles.modal} onSubmit={walletDataHandler}>
                     <Input
                         control={control}
                         errors={errors}
-                        label="Wallet Name"
+                        label="Назва гаманця"
                         name="name"
-                        placeholder="Enter your wallet name"
+                        placeholder="Введіть назву гаманця"
                         type={InputType.TEXT}
                         inputClassName={styles.input}
                         labelClassName={styles.label}
@@ -182,7 +184,7 @@ const NewWalletModal: React.FC<Properties> = ({
                     <Input
                         control={control}
                         errors={errors}
-                        label="Starting balance (optional)"
+                        label="Початковий баланс (опційно)"
                         name="balance"
                         placeholder="0.00"
                         type={InputType.TEXT}
@@ -206,7 +208,7 @@ const NewWalletModal: React.FC<Properties> = ({
                         type="submit"
                         disabled={isEdit ? !isFieldsChange : !fields.name}
                     >
-                        {isEdit ? 'Save' : 'Create'}
+                        {isEdit ? 'Зберегти' : 'Створити'}
                     </button>
                 </form>
             }

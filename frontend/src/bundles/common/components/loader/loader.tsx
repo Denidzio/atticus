@@ -1,11 +1,18 @@
-import Logo from '~/assets/img/logo.svg';
+import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 
-const Loader: React.FC = () => {
+interface LoaderProperties {
+    white?: boolean;
+}
+
+const Loader: React.FC<LoaderProperties> = ({ white }) => {
     return (
-        <div className={styles.container}>
-            <img className={styles.spinner} src={Logo} alt="logo" />
+        <div className={classNames(styles.spinner, white && styles.white)}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     );
 };

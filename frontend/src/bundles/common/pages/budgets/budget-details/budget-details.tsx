@@ -267,16 +267,16 @@ const BudgetDetails = (): JSX.Element => {
                 onSubmit={handleDeleteBudget}
                 Header={
                     <h1 className={styles.modalTitle}>
-                        Delete budget &quot;{name}&quot;
+                        Видалити бюджет &quot;{name}&quot;
                     </h1>
                 }
                 Body={
                     <p className={styles.modalDetailsContainer}>
-                        Are you sure you want to delete the budget &quot;
+                        Ви впевнені, що хочете видалити бюджет &quot;
                         {name}&quot;?
                     </p>
                 }
-                submitButtonName={'Delete Budget'}
+                submitButtonName="Видалити бюджет"
                 submitButtonVariant={ButtonVariant.DELETE}
                 footerContainerClass={styles.modalFooter}
                 buttonsSize={ButtonSize.MEDIUM}
@@ -294,7 +294,7 @@ const BudgetDetails = (): JSX.Element => {
                                     size={ButtonSize.MEDIUM}
                                     onClick={handleOpenModalDelete}
                                 >
-                                    Delete
+                                    Видалити
                                 </Button>
                             )}
                             <Button
@@ -302,7 +302,7 @@ const BudgetDetails = (): JSX.Element => {
                                 variant={ButtonVariant.SECONDARY}
                                 onClick={handleModal}
                             >
-                                Edit budget
+                                Редагувати бюджет
                             </Button>
                         </div>
                         <div className={styles.modal}>
@@ -320,12 +320,12 @@ const BudgetDetails = (): JSX.Element => {
                                 Header={
                                     <h2
                                         className={styles.modalTitle}
-                                    >{`You're about to delete ${
+                                    >{`Ви збираєтесь видалити ${
                                         isSelectedTransactions.length
-                                    } transaction${
+                                    } ${
                                         isSelectedTransactions.length > 1
-                                            ? 's'
-                                            : ''
+                                            ? 'транзакцій'
+                                            : 'транзакцію'
                                     }`}</h2>
                                 }
                                 Body={
@@ -335,17 +335,19 @@ const BudgetDetails = (): JSX.Element => {
                                                 styles.modalDetailsContainer
                                             }
                                         >
-                                            This change is irreversible. Do you
-                                            really want to delete{' '}
+                                            Ця зміна є незворотною. Ви дійсно
+                                            хочете{' '}
                                             {isSelectedTransactions.length > 1
-                                                ? 'them'
-                                                : 'it'}
-                                            ?
+                                                ? 'їх'
+                                                : 'її'}{' '}
+                                            видалити ?
                                         </h4>
                                     </>
                                 }
-                                submitButtonName={`Delete transaction${
-                                    isSelectedTransactions.length > 1 ? 's' : ''
+                                submitButtonName={`Видалити ${
+                                    isSelectedTransactions.length > 1
+                                        ? 'транзакції'
+                                        : 'транзакцію'
                                 }`}
                                 submitButtonVariant={ButtonVariant.DELETE}
                                 footerContainerClass={styles.modalFooter}
@@ -368,7 +370,11 @@ const BudgetDetails = (): JSX.Element => {
                         currency={matchingCurrency?.symbol as string}
                     />
                     <CardTotal
-                        title={moneyLeft > 0 ? 'Money left' : 'Money overspent'}
+                        title={
+                            moneyLeft > 0
+                                ? 'Грошей залишилось'
+                                : 'Грошей перевитрачено'
+                        }
                         sum={moneyLeft}
                         variant={CardVariant.VIOLET}
                         currency={matchingCurrency?.symbol as string}
@@ -381,9 +387,9 @@ const BudgetDetails = (): JSX.Element => {
                     />
                 </div>
                 <div className={styles.progressWrapper}>
-                    <div>Budget progress</div>
+                    <div>Прогрес бюджета</div>
                     <div className={styles.progressContent}>
-                        <div>{`You can spend ${canSpending}/Day`}</div>
+                        <div>{`Ви можете витрачати ${canSpending}/день`}</div>
                         <BudgetProgressBar
                             totalBudget={amount}
                             spentSoFar={moneyLeft}
@@ -412,14 +418,14 @@ const BudgetDetails = (): JSX.Element => {
                             <div className={styles.chartWrapper}>
                                 <DoughnutChartCard
                                     variant={DoughnutChartCartVariant.SECONDARY}
-                                    title={'Accounted Categories'}
+                                    title="Категорії"
                                     date={startDate}
                                     categories={doughnutChartExpense}
                                 />
                             </div>
                             <div className={styles.chartWrapper}>
                                 <DoughnutChartCard
-                                    title={'Accounted Wallets'}
+                                    title="Гаманці"
                                     date={startDate}
                                     transaction_num={0}
                                     transaction_type={''}
@@ -440,7 +446,7 @@ const BudgetDetails = (): JSX.Element => {
                 ) : (
                     <Placeholder
                         path={DashboardPlaceholder}
-                        body={'You have no transactions yet.'}
+                        body="У вас ще немає транзакцій"
                     />
                 )}
             </div>

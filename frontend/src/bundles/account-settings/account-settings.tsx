@@ -15,9 +15,13 @@ const AccountSettings: React.FC = () => {
     const { pathname } = useLocation();
     const haveName = storage.getSync(StorageKey.HAVE_NAME);
     const dataTabs = [
-        { title: 'Account', to: AppRoute.USER_PROFILE, icon: 'DASHBOARD' },
         {
-            title: 'Categories settings',
+            title: 'Обліковий запис',
+            to: AppRoute.USER_PROFILE,
+            icon: 'DASHBOARD',
+        },
+        {
+            title: 'Налаштування категорій',
             to: AppRoute.USER_CATEGORIES,
             icon: 'GEAR',
         },

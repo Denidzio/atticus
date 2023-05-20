@@ -105,7 +105,7 @@ const BaseModal: React.FC<Properties> = ({
                                         size={buttonsSize}
                                         onClick={handleClose}
                                     >
-                                        Cancel
+                                        Скасувати
                                     </Button>
                                     <Button
                                         variant={submitButtonVariant}

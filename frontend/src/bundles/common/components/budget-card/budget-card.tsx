@@ -76,12 +76,11 @@ const BudgetCard: React.FC<Properties> = ({ budget, currency }) => {
                     <p className={styles.bodyAmount}>
                         {toCustomLocaleString(moneyLeft, currency, true)}
                         <span className={styles.textSpan}>
-                            {+value > 0 ? 'left' : 'overspent'}
+                            {+value > 0 ? 'залишилось' : 'перевитрачено'}
                         </span>
                     </p>
                     <p className={styles.text}>
-                        from{' '}
-                        {toCustomLocaleString(budget.amount, currency, true)}
+                        з {toCustomLocaleString(budget.amount, currency, true)}
                     </p>
                 </div>
                 <div className={styles.cardFooter}>

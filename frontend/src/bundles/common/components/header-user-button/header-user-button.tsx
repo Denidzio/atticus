@@ -84,14 +84,14 @@ const HeaderUserButton: React.FC<Properties> = ({
             >
                 <div className={styles.list}>
                     <Link to={AppRoute.USER_PROFILE} className={styles.link}>
-                        Settings
+                        Налаштування
                     </Link>
                     <Link
                         onClick={logoutHandler}
                         to={AppRoute.ROOT}
                         className={styles.link}
                     >
-                        Log Out
+                        Вийти
                     </Link>
                 </div>
             </div>

@@ -10,12 +10,12 @@ const formatOneDay = (date: Date): string => {
 const formatRange = (range: Range): string => {
     const startDate: Date | undefined = range.startDate;
     const endDate: Date | undefined = range.endDate;
-    const formatedStartDate = new Intl.DateTimeFormat('en-US', {
+    const formatedStartDate = new Intl.DateTimeFormat('uk-UA', {
         month: 'short',
         day: '2-digit',
         year: 'numeric',
     }).format(startDate);
-    const formatedEndDate = new Intl.DateTimeFormat('en-US', {
+    const formatedEndDate = new Intl.DateTimeFormat('uk-UA', {
         month: 'short',
         day: '2-digit',
         year: 'numeric',

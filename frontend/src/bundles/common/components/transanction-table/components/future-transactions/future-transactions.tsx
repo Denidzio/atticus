@@ -50,8 +50,8 @@ const FutureTransactions: React.FC<FutureTransactionsProperties> = ({
             <div className={styles.transaction}>
                 <span className={styles.futureTitle}>
                     {isFutureTransactionPage
-                        ? 'Non-recurring'
-                        : 'Till the end of period'}
+                        ? 'Нерегулярний'
+                        : 'До кінця періоду'}
                 </span>
             </div>
             {isFutureTransactionPage ? null : (
@@ -66,13 +66,13 @@ const FutureTransactions: React.FC<FutureTransactionsProperties> = ({
                             }
                             onClick={handleToggleShowFutureTransactions}
                         />
-                        <span className={styles.rowTitle}>Scheduled</span>
+                        <span className={styles.rowTitle}>Заплановані</span>
                     </div>
                     <div className={styles.transactionCount}>
                         {futureTransactions.length}
                         <span className={styles.smHide}>
-                            {futureTransactions.length === 1 && ' transaction'}
-                            {futureTransactions.length != 1 && ' transactions'}
+                            {futureTransactions.length === 1 && ' транзакція'}
+                            {futureTransactions.length != 1 && ' транзакції'}
                         </span>
                     </div>
                     {futureTransactions.length > 0 ? (
@@ -123,7 +123,7 @@ const FutureTransactions: React.FC<FutureTransactionsProperties> = ({
                             styles.noTransaction,
                         )}
                     >
-                        - - - No transactions yet - - -
+                        - - - Немає транзакцій - - -
                     </div>
                 )}
             </div>

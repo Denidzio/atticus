@@ -11,7 +11,7 @@ const WalletSettings: React.FC = () => {
         <div className={styles.body}>
             <div className={styles.container}>
                 <main className={styles.mainBoard}>
-                    <Title>General Information</Title>
+                    <Title>Загальна інформація</Title>
                     <FormContainer />
                 </main>
             </div>

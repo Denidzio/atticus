@@ -11,7 +11,7 @@ const UserProfile: React.FC = () => {
 
     return (
         <div className={styles.userProfile}>
-            <Title>Account Settings</Title>
+            <Title>Налаштування облікового запису</Title>
             {dataStatus === DataStatus.PENDING ? (
                 <div className={styles.loaderContainer}>
                     <Loader />

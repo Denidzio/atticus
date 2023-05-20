@@ -137,20 +137,19 @@ const FormContainer: React.FC = () => {
                 onSubmit={handleDeleteWalet}
                 Header={
                     <h1 className={styles.modalTitle}>
-                        Delete wallet &quot;{currentWallet.name}&quot;
+                        Видалити гаманець &quot;{currentWallet.name}&quot;
                     </h1>
                 }
                 Body={
                     <div className={styles.modalDetailsContainer}>
                         <p className={styles.modalSubTitle}>
-                            Are you sure you want to delete the wallet &quot;
-                            {currentWallet.name}&quot;. You will lose all your
-                            transactions, budgets and overview inside of this
-                            wallet.
+                            Ви впевнені, що хочете видалити гаманець &quot;
+                            {currentWallet.name}&quot;? Ви втратите всі ваші
+                            транзакції та бюджети всередині цього гаманця.
                         </p>
                     </div>
                 }
-                submitButtonName={'Delete Wallet'}
+                submitButtonName="Видалити гаманець"
                 submitButtonVariant={ButtonVariant.DELETE}
                 footerContainerClass={styles.modalFooter}
                 buttonsSize={ButtonSize.MEDIUM}
@@ -160,11 +159,11 @@ const FormContainer: React.FC = () => {
                     <Input
                         value={fields.name}
                         type={InputType.TEXT}
-                        label="Wallet Name"
+                        label="Назва гаманця"
                         name="name"
                         control={control}
                         errors={errors}
-                        placeholder="Wallet name"
+                        placeholder="Назва гаманця"
                         onChange={handleNameInputChange}
                         maxLength={50}
                     />
@@ -173,11 +172,11 @@ const FormContainer: React.FC = () => {
                     <Input
                         value={fields.balance}
                         type={InputType.NUMBER}
-                        label="Initial balance"
+                        label="Початковий баланс"
                         name="balance"
                         control={control}
                         errors={errors}
-                        placeholder="Initial balance"
+                        placeholder="Початковий баланс"
                         onChange={handleBalanceInputChange}
                         maxLength={10}
                     />
@@ -193,14 +192,14 @@ const FormContainer: React.FC = () => {
                         alt="icon"
                         className={styles.button_delete_icon}
                     />
-                    Delete Wallet
+                    Видалити гаманець
                 </Button>
                 <Button
                     variant={ButtonVariant.PRIMARY}
                     onClick={handleUpdateWallet}
                     disabled={!isActive}
                 >
-                    Update Setting
+                    Оновити налаштування
                 </Button>
             </div>
         </>

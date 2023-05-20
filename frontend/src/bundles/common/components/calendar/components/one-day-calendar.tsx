@@ -1,6 +1,7 @@
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
+import uk from 'date-fns/locale/uk';
 import React, { useState } from 'react';
 import { Calendar } from 'react-date-range';
 
@@ -68,6 +69,7 @@ const OneDayCalendar: React.FC<Properties> = ({ onChange }) => {
                             date={day}
                             onChange={handleSelectDay}
                             color="#03bfd9"
+                            locale={uk}
                         />
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import uk from 'date-fns/locale/uk';
 import { useCallback, useEffect, useState } from 'react';
 import { Calendar } from 'react-date-range';
 import {
@@ -77,7 +78,11 @@ const OneDayCalendar: React.FC<OneDayCalendarProperties> = ({
                         onKeyDown={handleKeyDown}
                     ></button>
                     <div className={styles.modal_one_day}>
-                        <Calendar date={day} onChange={handleSelectDay} />
+                        <Calendar
+                            date={day}
+                            onChange={handleSelectDay}
+                            locale={uk}
+                        />
                     </div>
                 </>
             )}

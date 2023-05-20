@@ -399,22 +399,22 @@ const Base: React.FC = () => {
                         }}
                     >
                         <CardTotal
-                            title="Total Balance Total Balance Total Balance Total Balance Total Balance"
+                            title="Загальний баланс Загальний баланс Загальний баланс Загальний баланс Загальний баланс"
                             sum={40.45}
                             variant={CardVariant.ORANGE}
                         />
                         <CardTotal
-                            title="Total Period Change"
+                            title="Загальна зміна за період"
                             sum={504_000_000_000.549}
                             variant={CardVariant.BLUE}
                         />
                         <CardTotal
-                            title="Total Period Expenses"
+                            title="Загальні витрати за період"
                             sum={-9700.34}
                             variant={CardVariant.WHITE}
                         />
                         <CardTotal
-                            title="Total Balance"
+                            title="Загальний баланс"
                             sum={7600.34}
                             variant={CardVariant.VIOLET}
                         />
@@ -534,8 +534,8 @@ const Base: React.FC = () => {
                         <Input
                             name="password"
                             type={InputType.PASSWORD}
-                            label="Password"
-                            placeholder="Password"
+                            label="Пароль"
+                            placeholder="Пароль"
                             control={control}
                             errors={errors}
                         />
@@ -543,8 +543,8 @@ const Base: React.FC = () => {
                         <Input
                             name="email"
                             type={InputType.PASSWORD}
-                            label="Text"
-                            placeholder="Password"
+                            label="Текст"
+                            placeholder="Пароль"
                             control={control}
                             errors={errors}
                             isDisabled={true}

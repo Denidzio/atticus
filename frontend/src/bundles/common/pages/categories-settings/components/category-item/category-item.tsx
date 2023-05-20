@@ -107,9 +107,9 @@ const CategoryItem: React.FC<Properties> = ({
                                 </div>
                                 <div className={styles.count}>
                                     <span className={styles.text}>
-                                        {count === 1 && `${count} transaction`}
+                                        {count === 1 && `${count} транзакція`}
                                         {count != 1 &&
-                                            `${count ?? 0} transactions`}
+                                            `${count ?? 0} транзакцій`}
                                     </span>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@ const CategoryItem: React.FC<Properties> = ({
                 onClose={handleCloseModal}
                 onSubmit={handleCloseModal}
                 Header={
-                    <h2 className="visually-hidden">{`You're about to edit ${name} categories`}</h2>
+                    <h2 className="visually-hidden">{`Ви редагуєте категорії ${name}`}</h2>
                 }
                 Body={
                     <FormCategory
@@ -176,7 +176,7 @@ const CategoryItem: React.FC<Properties> = ({
                         isCreateModalShown={false}
                     />
                 }
-                submitButtonName={'Edit category'}
+                submitButtonName="Редагувати категорію"
                 hasActionButtons={false}
             />
             <BaseModal
@@ -184,19 +184,17 @@ const CategoryItem: React.FC<Properties> = ({
                 onClose={handleCloseModal}
                 onSubmit={handleClickDelete}
                 Header={
-                    <h1 className={styles.modalTitle}>
-                        You are about to delete category
-                    </h1>
+                    <h1 className={styles.modalTitle}>Видалити категорію</h1>
                 }
                 Body={
                     <>
                         <p className={styles.modalDetailsContainer}>
-                            This change is irreversible. Do you really want to
-                            delete it?
+                            Ця зміна є незворотною. Ви дійсно хочете її
+                            видалити?
                         </p>
                     </>
                 }
-                submitButtonName={'Delete category'}
+                submitButtonName="Видалити категорію"
                 submitButtonVariant={ButtonVariant.DELETE}
                 footerContainerClass={styles.modalFooter}
                 buttonsSize={ButtonSize.MEDIUM}

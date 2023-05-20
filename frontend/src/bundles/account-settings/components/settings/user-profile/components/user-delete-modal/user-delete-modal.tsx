@@ -13,9 +13,9 @@ type Properties = {
 };
 
 const UserDeleteCheckboxesText = [
-    'I understand that all my wallets will be permanently deleted.',
-    'I understand that all my transactions, budgets, and data within these wallets will be permanently deleted.',
-    'I understand that this process is permanent and cannot be reverted.',
+    'Я розумію, що всі мої гаманці будуть видалені.',
+    'Я розумію, що всі мої транзакції, бюджети та дані в цих гаманцях буде видалено.',
+    'Я розумію, що цей процес є незворотнім.',
 ];
 
 const defaultCheckboxListState: boolean[] = UserDeleteCheckboxesText.map(
@@ -46,11 +46,11 @@ const UserDeleteModal: React.FC<Properties> = ({
             Header={
                 <div className={styles.headerContainer}>
                     <h1 className={styles.headerTitle}>
-                        Delete Your Atticus Account
+                        Видалити обліковий запис
                     </h1>
                     <p className={styles.headerSubTitle}>
-                        You are about to delete your Atticus account. Please
-                        confirm that you understand what this means
+                        Ви збираєтесь видалити ваш обліковий запис. Будь ласка,
+                        підтвердіть цю дію
                     </p>
                 </div>
             }
@@ -71,7 +71,7 @@ const UserDeleteModal: React.FC<Properties> = ({
                     ))}
                 </ul>
             }
-            submitButtonName={'Delete Account'}
+            submitButtonName="Видалити обліковий запис"
             submitButtonVariant={ButtonVariant.DELETE}
             onSubmit={onDelete}
             disabled={checkboxList.includes(false)}

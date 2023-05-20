@@ -1,8 +1,8 @@
 enum ExceptionMessage {
-    INVALID_CREDENTIALS = 'You entered an incorrect e-mail address or password',
-    EMAIL_ALREADY_EXISTS = 'User with this email already exists',
-    INVALID_TOKEN = 'Invalid token',
-    AUTHORIZE_ERROR = 'You should authorize',
+    INVALID_CREDENTIALS = 'Ви ввели неправильний e-mail або пароль',
+    EMAIL_ALREADY_EXISTS = 'Користувач з таким e-mail вже існує',
+    INVALID_TOKEN = 'Не валідний токен',
+    AUTHORIZE_ERROR = 'Ви не авторизовані',
 }
 
 export { ExceptionMessage };

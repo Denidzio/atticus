@@ -1,6 +1,6 @@
 const categoriesType = [
-    { value: 'income', name: 'Income' },
-    { value: 'expense', name: 'Expense' },
+    { value: 'income', name: 'Дохід' },
+    { value: 'expense', name: 'Витрата' },
 ];
 
 export { categoriesType };

@@ -16,7 +16,7 @@ const NewWalletModalPart: React.FC = () => {
     return (
         <div>
             <CodeHighlight code={codeExample} />
-            <button onClick={handleModal}>Add New Wallet</button>
+            <button onClick={handleModal}>Додати новий гаманець</button>
             <NewWalletModal
                 isShown={active}
                 onClose={handleCancel}
@@ -40,7 +40,7 @@ const NewWalletModalPart: React.FC = () => {
     return (
         <div>
             <CodeHighlight code={codeExample} />
-            <button onClick={handleModal}>Add New Wallet</button>
+            <button onClick={handleModal}>Додати новий гаманець</button>
             <NewWalletModal
                 isShown={active}
                 onClose={handleCancel}

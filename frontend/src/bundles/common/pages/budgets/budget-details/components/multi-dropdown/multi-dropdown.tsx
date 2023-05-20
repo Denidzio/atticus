@@ -102,10 +102,11 @@ const RenderMultiDropdown = ({
             <MultiDropdown
                 formatOptionLabel={formatOptionLabel}
                 data={newDataMenu as DataType[]}
-                label={'Budgeted for'}
+                label="Категорії бюджетування"
                 selectedOption={selectedMulti}
                 handleChange={handleMultiDropdownChangeWrapper}
                 labelClassName={styles.dropdownLabel}
+                placeholder="Вибрати..."
             />
         </div>
     );

@@ -50,13 +50,13 @@ const ManageCategories: React.FC<Properties> = ({
 
     const buttonIsCheckedCategoriesDeleteName =
         selectedCategories.length === 0
-            ? 'Delete categories'
-            : `Delete categories  (${selectedCategories.length})`;
+            ? 'Видалити категорії'
+            : `Видалити категорії (${selectedCategories.length})`;
 
     return (
         <>
             <div className={styles.manageWrapper}>
-                <h2 className={styles.title}>Manage Categories</h2>
+                <h2 className={styles.title}>Керувати категоріями</h2>
                 <div className={styles.wrapperAllBtn}>
                     <div className={styles.wrapperBtn}>
                         <Button
@@ -82,18 +82,17 @@ const ManageCategories: React.FC<Properties> = ({
                 Header={
                     <h2 className={styles.modalTitle}>
                         {selectedCategories.length === 1 &&
-                            `You're about to delete ${selectedCategories.length} category`}
+                            `Ви збираєтесь видалити ${selectedCategories.length} категорію`}
                         {selectedCategories.length != 1 &&
-                            `You're about to delete ${selectedCategories.length} categories`}
+                            `Ви збираєтесь видалити ${selectedCategories.length} категорії`}
                     </h2>
                 }
                 Body={
                     <p className={styles.modalDetailsContainer}>
-                        This change is irreversible. Do you really want to
-                        delete them?
+                        Ця зміна є незворотною. Ви дійсно хочете їх видалити?
                     </p>
                 }
-                submitButtonName={'Delete categories'}
+                submitButtonName="Видалити категорії"
                 footerContainerClass={styles.modalFooter}
                 submitButtonVariant={ButtonVariant.DELETE}
                 buttonsSize={ButtonSize.MEDIUM}

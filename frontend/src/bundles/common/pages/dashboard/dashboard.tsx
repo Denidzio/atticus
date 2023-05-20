@@ -169,9 +169,9 @@ const ChartBox = ({
                                     <div className={styles.inDays}>
                                         {transaction.transactions.length}
                                         {transaction.transactions.length ===
-                                            1 && ' transaction'}
+                                            1 && ' транзакція'}
                                         {transaction.transactions.length != 1 &&
-                                            ' transactions'}
+                                            ' транзакції'}
                                     </div>
 
                                     <div
@@ -503,7 +503,7 @@ const Dashboard: React.FC = () => {
         <div className={styles.container}>
             <div className={styles.dashboard}>
                 <div className={styles.contentWrapper}>
-                    <h2 className={styles.title}>Wallets</h2>
+                    <h2 className={styles.title}>Гаманці</h2>
                     <div className={styles.wallets}>
                         {walletsWithBalances.map(
                             ({ id, name, balance }, index) => (
@@ -516,7 +516,7 @@ const Dashboard: React.FC = () => {
                                         title={name}
                                         size={WalletCardSize.MEDIUM}
                                         balance_value={balance}
-                                        wallet_type={'Balance'}
+                                        wallet_type="Баланс"
                                         variant={
                                             walletCardVariants[
                                                 index %
@@ -531,7 +531,7 @@ const Dashboard: React.FC = () => {
                             ),
                         )}
                         <WalletButton onClick={handleModal}>
-                            Add New Wallet
+                            Додати новий гаманець
                         </WalletButton>
                         <NewWalletModal
                             isShown={active}
@@ -540,7 +540,7 @@ const Dashboard: React.FC = () => {
                         />
                     </div>
                     <h2 className={classNames(styles.title, styles.overview)}>
-                        Overview
+                        Огляд
                     </h2>
                 </div>
             </div>
@@ -571,7 +571,7 @@ const Dashboard: React.FC = () => {
                                     className={styles.resetButton}
                                     onClick={handleResetFilters}
                                 >
-                                    Reset filters
+                                    Скинути фільтри
                                 </Button>
                             </div>
                         </div>
@@ -580,32 +580,32 @@ const Dashboard: React.FC = () => {
                                 data={walletDropdown}
                                 handleChange={handleDropdownByWallets}
                                 selectedOption={wallet}
-                                label="By wallet"
+                                label="За гаманцем"
                                 labelClassName={styles.dropdownLabel}
-                                placeholder={'Select...'}
+                                placeholder="Вибрати..."
                             />
                             <Dropdown
                                 data={data as unknown as DataType[]}
                                 handleChange={handleDropdownByCategory}
                                 selectedOption={category}
-                                label="By category"
+                                label="За категорією"
                                 labelClassName={styles.dropdownLabel}
-                                placeholder={'Select...'}
+                                placeholder="Вибрати..."
                                 formatOptionLabel={iconFormatOptionLabel}
                             />
                             <Input
                                 labelClassName={styles.filterLabel}
                                 control={control}
                                 errors={errors}
-                                label={'By note'}
-                                name={'name'}
+                                label="За приміткою"
+                                name="name"
                                 value={filters.name}
                                 onChange={handleChange}
-                                placeholder={'Filter by specific keyword'}
+                                placeholder="Фільтрувати за ключовим словом"
                             />
                             <div className={styles.filter}>
                                 <span className={styles.categoryText}>
-                                    By amount
+                                    За сумою
                                 </span>
                                 <div className={styles.slider}>
                                     <RangeSlider
@@ -624,7 +624,7 @@ const Dashboard: React.FC = () => {
                     <div className={styles.bars}>
                         <div className={styles.cards}>
                             <CardTotal
-                                title="Total Balance"
+                                title="Загальний баланс"
                                 sum={
                                     walletsWithBalances.find(
                                         (wallet) =>
@@ -643,7 +643,7 @@ const Dashboard: React.FC = () => {
                                 currency={matchingCurrency?.symbol as string}
                             />
                             <CardTotal
-                                title="Total Period Change"
+                                title="Загальна зміна за період"
                                 sum={getTotalTransactionSum(
                                     transactionsData as TransactionGetAllItemResponseDto[],
                                     currentWallet?.id,
@@ -652,7 +652,7 @@ const Dashboard: React.FC = () => {
                                 currency={matchingCurrency?.symbol as string}
                             />
                             <CardTotal
-                                title="Total Period Income"
+                                title="Загальний дохід за період"
                                 sum={getTotalPeriodAmount(
                                     transactionsData as TransactionGetAllItemResponseDto[],
                                     'income',
@@ -665,7 +665,7 @@ const Dashboard: React.FC = () => {
                             />
 
                             <CardTotal
-                                title="Total Period Expenses"
+                                title="Загальні витрати за період"
                                 sum={getTotalPeriodAmount(
                                     transactionsData as TransactionGetAllItemResponseDto[],
                                     'expense',
@@ -679,7 +679,7 @@ const Dashboard: React.FC = () => {
                         {transactions.length > 0 && transactionData ? (
                             <div className={styles.charts}>
                                 <ChartBox
-                                    title={'Account Balance'}
+                                    title="Баланс"
                                     date={formatRangeGraph(day)}
                                 >
                                     {lineChartData.length > 1 ? (
@@ -699,7 +699,7 @@ const Dashboard: React.FC = () => {
                                     )}
                                 </ChartBox>
                                 <ChartBox
-                                    title={'Changes'}
+                                    title="Зміни"
                                     date={formatRangeGraph(day)}
                                 >
                                     {verticalChartData.every(
@@ -721,7 +721,7 @@ const Dashboard: React.FC = () => {
                                     )}
                                 </ChartBox>
                                 <ChartBox
-                                    title={'Period Income'}
+                                    title="Витрати за період"
                                     date={formatRangeGraph(day)}
                                     transactions={transactionData.filter(
                                         (transaction) => transaction.amount > 0,
@@ -739,14 +739,12 @@ const Dashboard: React.FC = () => {
                                             icon={FaIcons.MONEY_CHECK_DOLLAR}
                                             iconSize={IconSize.ONE_HUNDRED}
                                             margin={'30px auto'}
-                                            body={
-                                                'You have no income transactions yet'
-                                            }
+                                            body="У вас ще немає доходів"
                                         />
                                     )}
                                 </ChartBox>
                                 <ChartBox
-                                    title={'Period Expenses'}
+                                    title="Витрати за період"
                                     date={formatRangeGraph(day)}
                                     transactions={transactionData.filter(
                                         (transaction) => transaction.amount < 0,
@@ -764,9 +762,7 @@ const Dashboard: React.FC = () => {
                                             icon={FaIcons.MONEY_CHECK_DOLLAR}
                                             iconSize={IconSize.ONE_HUNDRED}
                                             margin={'30px auto'}
-                                            body={
-                                                'You have no expense transactions yet'
-                                            }
+                                            body="У вас ще немає витрат"
                                         />
                                     )}
                                 </ChartBox>
@@ -774,7 +770,7 @@ const Dashboard: React.FC = () => {
                         ) : (
                             <Placeholder
                                 path={DashboardPlaceholder}
-                                body={'You have no transactions yet.'}
+                                body="У вас ще немає транзакцій"
                             />
                         )}
                     </div>

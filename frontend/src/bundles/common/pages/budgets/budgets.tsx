@@ -50,7 +50,7 @@ const Budgets: React.FC = () => {
         <div className={styles.budgets}>
             <div className={classNames(styles.container, 'container')}>
                 <div className={styles.wrapper}>
-                    <h1 className={styles.title}>Budgets</h1>
+                    <h1 className={styles.title}>Бюджети</h1>
                     {dataStatus === DataStatus.PENDING ? (
                         <div className={styles.loaderContainer}>
                             <Loader />
@@ -79,7 +79,7 @@ const Budgets: React.FC = () => {
                                         />
                                     </Button>
                                     <p className={styles.createText}>
-                                        Create a New Budget
+                                        Створити новий бюджет
                                     </p>
                                 </div>
                             </div>

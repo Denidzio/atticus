@@ -19,7 +19,6 @@ import { Budgets } from '~/bundles/common/pages/budgets/budgets';
 import { Dashboard } from '~/bundles/common/pages/dashboard/dashboard';
 import { NotFound } from '~/bundles/common/pages/not-found/not-found';
 import { WalletDetails } from '~/bundles/common/pages/wallet-details/wallet-details';
-import { Landing } from '~/bundles/landing/landing';
 import { StyleGuide } from '~/bundles/ui/ui';
 import { store } from '~/framework/store/store';
 

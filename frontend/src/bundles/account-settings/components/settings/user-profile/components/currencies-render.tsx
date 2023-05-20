@@ -62,7 +62,7 @@ const RenderCurrency = ({
             data={mutableCurrencies}
             handleChange={handleCurrencyChange}
             selectedOption={selectedSingleCurrency}
-            label="Account currency"
+            label="Валюта"
             labelClassName={styles.dropdownLabel}
         />
     );

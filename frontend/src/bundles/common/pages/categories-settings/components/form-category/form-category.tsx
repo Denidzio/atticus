@@ -154,7 +154,7 @@ const FormCategory: React.FC<Properties> = ({
                 {data.name ? (
                     <span className={styles.input}>{data.name}</span>
                 ) : (
-                    <span className={styles.inputLabel}>Choose type</span>
+                    <span className={styles.inputLabel}>Виберіть тип</span>
                 )}
             </div>
         ),
@@ -205,7 +205,10 @@ const FormCategory: React.FC<Properties> = ({
         onClose();
     }, [dispatch, isCreateModalShown, onClose, formData, id]);
 
-    const buttonName = isCreateModalShown ? 'Create category' : 'Edit category';
+    const buttonName = isCreateModalShown
+        ? 'Створити категорію'
+        : 'Редагувати категорію';
+
     return (
         <div className={styles.form}>
             <form name="categoryEditForm" autoComplete="off">
@@ -216,7 +219,7 @@ const FormCategory: React.FC<Properties> = ({
                             selectedOption={selectedIcon}
                             handleChange={handleDropdownIconChange}
                             labelClassName={styles.inputLabel}
-                            label={'Icon'}
+                            label="Значок"
                             formatOptionLabel={iconFormatOptionLabel}
                         />
                     </div>
@@ -226,7 +229,7 @@ const FormCategory: React.FC<Properties> = ({
                             selectedOption={selectedColorIcon}
                             handleChange={handleDropdownColorChange}
                             labelClassName={styles.inputLabel}
-                            label={'Color'}
+                            label="Колір"
                             formatOptionLabel={iconColorFormatOptionLabel}
                         />
                     </div>
@@ -234,9 +237,9 @@ const FormCategory: React.FC<Properties> = ({
                         <Input
                             control={control}
                             errors={errors}
-                            label="Name"
+                            label="Назва"
                             name="name"
-                            placeholder="New category name"
+                            placeholder="Назва категорії"
                             type={InputType.TEXT}
                             inputClassName={styles.customInput}
                             labelClassName={styles.inputLabelColor}
@@ -257,7 +260,7 @@ const FormCategory: React.FC<Properties> = ({
                                 selectedOption={selectedType}
                                 handleChange={handleDropdownTypeChange}
                                 labelClassName={styles.inputLabel}
-                                label={'Type'}
+                                label="Тип"
                                 formatOptionLabel={typeFormatOptionLabel}
                             />
                         </div>

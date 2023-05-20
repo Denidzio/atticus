@@ -103,7 +103,7 @@ const SettingsForm: React.FC<Properties> = ({ user }) => {
 
             await dispatch(usersActions.updateUser(uploadData)).unwrap();
             if (haveName) {
-                notification.success('Account settings has been updated');
+                notification.success('Обліковий запис оновлено');
             }
         },
         [dispatch, navigate],
@@ -129,17 +129,17 @@ const SettingsForm: React.FC<Properties> = ({ user }) => {
                 <Input
                     type={InputType.TEXT}
                     labelClassName={styles.inputLabel}
-                    label="First name"
-                    placeholder="Enter your name"
+                    label="Ім'я"
+                    placeholder="Введіть ваше ім'я"
                     name="firstName"
                     control={control}
                     errors={errors}
                 />
                 <Input
                     type={InputType.TEXT}
-                    label="Last name"
+                    label="Прізвище"
                     labelClassName={styles.inputLabel}
-                    placeholder="Enter your surname"
+                    placeholder="Введіть ваше прізвище"
                     name="lastName"
                     control={control}
                     errors={errors}
@@ -148,7 +148,7 @@ const SettingsForm: React.FC<Properties> = ({ user }) => {
                 <Controller name="sex" control={control} render={RenderSex} />
 
                 <div className={styles.calendar}>
-                    <div className={styles.label}>Date of birth</div>
+                    <div className={styles.label}>Дата народження</div>
                     <Controller
                         name="dateOfBirth"
                         control={control}
@@ -163,9 +163,9 @@ const SettingsForm: React.FC<Properties> = ({ user }) => {
 
                 <Input
                     type={InputType.EMAIL}
-                    label="E-mail address"
+                    label="E-mail адреса"
                     labelClassName={styles.inputLabel}
-                    placeholder="Enter your email"
+                    placeholder="Введіть ваш email"
                     name="email"
                     control={control}
                     errors={errors}
@@ -186,12 +186,12 @@ const SettingsForm: React.FC<Properties> = ({ user }) => {
                         <span className={styles.icon}>
                             <Icon name={FaIcons.TRASH_CAN} />
                         </span>
-                        <span>Delete Account</span>
+                        <span>Видалити обліковий запис</span>
                     </Button>
                     <Button disabled={!isChange}>
                         {user?.firstName && user.lastName
-                            ? 'Update My Settings'
-                            : 'Get started'}
+                            ? 'Оновити налаштування'
+                            : 'Почати'}
                     </Button>
                 </div>
             </form>

@@ -22,7 +22,7 @@ const Avatar: React.FC<Properties> = ({ selectedFile, handleFileChange }) => {
                 <img
                     className={styles.avatarImage}
                     src={URL.createObjectURL(selectedFile)}
-                    alt="Selected file"
+                    alt="Вибраний файл"
                 />
             ) : (
                 <button
@@ -30,7 +30,7 @@ const Avatar: React.FC<Properties> = ({ selectedFile, handleFileChange }) => {
                     onClick={handleClick}
                     type="button"
                 >
-                    Upload image here
+                    Завантажте фото тут
                     <input
                         type="file"
                         accept={'image/*'}

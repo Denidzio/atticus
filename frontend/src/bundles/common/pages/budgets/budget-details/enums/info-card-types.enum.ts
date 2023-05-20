@@ -1,8 +1,8 @@
 enum InfoCardTypes {
-    ORIGINALLY = 'Originally Budgeted',
-    SPENT = 'Spent so far',
-    LEFT = 'Money left',
-    CAN = 'You can spend',
+    ORIGINALLY = 'Початковий бюджет',
+    SPENT = 'Витрачено',
+    LEFT = 'Грошей залишилось',
+    CAN = 'Можна витрачати',
 }
 
 export { InfoCardTypes };

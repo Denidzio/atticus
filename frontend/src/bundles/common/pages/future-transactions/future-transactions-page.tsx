@@ -345,7 +345,7 @@ const FutureTransactionsPage: React.FC = () => {
                                     className={styles.reset}
                                     onClick={hangleReset}
                                 >
-                                    Reset filters
+                                    Скинути фільтри
                                 </button>
                             </div>
                             <div className={styles.applyFilters}>
@@ -360,7 +360,8 @@ const FutureTransactionsPage: React.FC = () => {
                                             handleChange={
                                                 handleCategoriesMultiDropdownChange
                                             }
-                                            label="By category"
+                                            label="За категорією"
+                                            placeholder="Вибрати..."
                                         />
                                     </div>
                                 </div>
@@ -368,8 +369,8 @@ const FutureTransactionsPage: React.FC = () => {
                                     <div className={styles.dropdown}>
                                         <Input
                                             type={InputType.TEXT}
-                                            label="By note"
-                                            placeholder="Filter by specific keyword"
+                                            label="За приміткою"
+                                            placeholder="Фільтрувати за ключовим словом"
                                             name="note"
                                             control={control}
                                             errors={errors}
@@ -384,7 +385,7 @@ const FutureTransactionsPage: React.FC = () => {
                                     )}
                                 >
                                     <span className={styles.categoryText}>
-                                        By amount
+                                        За сумою
                                     </span>
                                     <div className={styles.slider}>
                                         <RangeSlider
@@ -413,7 +414,7 @@ const FutureTransactionsPage: React.FC = () => {
                             ) : (
                                 <Placeholder
                                     path={DashboardPlaceholder}
-                                    body={'You have no transactions yet.'}
+                                    body="У вас ще немає транзакцій"
                                 />
                             )}
                             <TransactionModal
@@ -428,12 +429,12 @@ const FutureTransactionsPage: React.FC = () => {
                                 Header={
                                     <h2
                                         className={styles.modalTitle}
-                                    >{`You're about to delete ${
+                                    >{`Ви збираєтесь видалити ${
                                         isSelectedTransactions.length
-                                    } transaction${
+                                    } ${
                                         isSelectedTransactions.length > 1
-                                            ? 's'
-                                            : ''
+                                            ? 'транзакцій'
+                                            : 'транзакцію'
                                     }`}</h2>
                                 }
                                 Body={
@@ -443,17 +444,19 @@ const FutureTransactionsPage: React.FC = () => {
                                                 styles.modalDetailsContainer
                                             }
                                         >
-                                            This change is irreversible. Do you
-                                            really want to delete{' '}
+                                            Ця зміна є незворотною. Ви справді
+                                            хочете{' '}
                                             {isSelectedTransactions.length > 1
-                                                ? 'them'
-                                                : 'it'}
-                                            ?
+                                                ? 'їх'
+                                                : 'її'}{' '}
+                                            видалити ?
                                         </h4>
                                     </>
                                 }
-                                submitButtonName={`Delete transaction${
-                                    isSelectedTransactions.length > 1 ? 's' : ''
+                                submitButtonName={`Видалити ${
+                                    isSelectedTransactions.length > 1
+                                        ? 'транзакції'
+                                        : 'транзакцію'
                                 }`}
                                 submitButtonVariant={ButtonVariant.DELETE}
                                 footerContainerClass={styles.modalFooter}

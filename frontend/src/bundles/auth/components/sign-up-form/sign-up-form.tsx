@@ -78,17 +78,19 @@ const SignUpForm: React.FC<Properties> = ({ onSubmit }) => {
             <BaseModal
                 isShown={modalOpen}
                 Header={
-                    <h1 className={styles.modalTitle}>Account Already Exist</h1>
+                    <h1 className={styles.modalTitle}>
+                        Обліковий запис вже існує
+                    </h1>
                 }
                 Body={
                     <div className={styles.modalDetailsContainer}>
                         <p className={styles.modalDetails}>
-                            Account with this email already registered in
-                            Atticus. Please login using this email.
+                            Обліковий запис з таким e-mail вже зареєстрований в
+                            Atticus. Будь ласка, використайте інший e-mail
                         </p>
                     </div>
                 }
-                submitButtonName={'Login'}
+                submitButtonName="Ввійти"
                 onClose={onModalClose}
                 onSubmit={onModalSubmit}
                 footerContainerClass={styles.modalFooter}
@@ -100,7 +102,7 @@ const SignUpForm: React.FC<Properties> = ({ onSubmit }) => {
                     <Input
                         type={InputType.EMAIL}
                         label="E-mail"
-                        placeholder="E-mail address"
+                        placeholder="E-mail адреса"
                         name="email"
                         control={control}
                         errors={errors}
@@ -110,8 +112,8 @@ const SignUpForm: React.FC<Properties> = ({ onSubmit }) => {
                 <p className={styles.inputWrapper}>
                     <Input
                         type={InputType.PASSWORD}
-                        label="Password"
-                        placeholder="Password"
+                        label="Пароль"
+                        placeholder="Пароль"
                         name="password"
                         control={control}
                         errors={errors}
@@ -122,8 +124,8 @@ const SignUpForm: React.FC<Properties> = ({ onSubmit }) => {
                 <p className={styles.inputWrapper}>
                     <Input
                         type={InputType.PASSWORD}
-                        label="Confirm password"
-                        placeholder="Confirm password"
+                        label="Підтвердіть пароль"
+                        placeholder="Підтвердіть пароль"
                         name="repeatPassword"
                         control={control}
                         errors={errors}
@@ -132,7 +134,7 @@ const SignUpForm: React.FC<Properties> = ({ onSubmit }) => {
                     />
                 </p>
                 <Button className={styles.formButton} type={ButtonType.SUBMIT}>
-                    Sign Up
+                    Зареєструватись
                 </Button>
             </form>
         </>

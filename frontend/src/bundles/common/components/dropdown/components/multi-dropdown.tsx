@@ -150,11 +150,11 @@ const MultiDropdown: React.FC<Properties> = ({
         return (
             <>
                 {allSelected ? (
-                    <span className={styles.circle}>All</span>
+                    <span className={styles.circle}>Вcі</span>
                 ) : (
                     <span className={styles.circle}>{length}</span>
                 )}
-                <span className={styles.text}>Selected</span>
+                <span className={styles.text}>Вибрано</span>
             </>
         );
     };

@@ -7,8 +7,8 @@ import { type DataType } from '~/bundles/common/types/dropdown.type';
 import styles from '../../styles.module.scss';
 
 const sex = [
-    { value: 'male', name: 'Male' },
-    { value: 'female', name: 'Female' },
+    { value: 'male', name: 'Чоловік' },
+    { value: 'female', name: 'Жінка' },
 ];
 
 const RenderSex = ({
@@ -46,7 +46,7 @@ const RenderSex = ({
             handleChange={handleCurrencyChange}
             selectedOption={selectedSingleSex}
             labelClassName={styles.dropdownLabel}
-            label="Sex"
+            label="Стать"
         />
     );
 };

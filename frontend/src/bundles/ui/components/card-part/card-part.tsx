@@ -7,22 +7,22 @@ const CardExample: React.FC = () => {
     return (
     <>
         <CardTotal
-            title="Total Balance Total Balance Total Balance Total Balance Total Balance"
+            title="Загальний баланс Загальний баланс Загальний баланс Загальний баланс Загальний баланс"
             sum={40.45}
             variant={CardVariant.ORANGE}
         />
         <CardTotal
-            title="Total Period Change"
+            title="Загальна зміна за період"
             sum={504_000_000_000.549}
             variant={CardVariant.BLUE}
         />
         <CardTotal
-            title="Total Period Expenses"
+            title="Загальні витрати за період"
             sum={-9700.34}
             variant={CardVariant.WHITE}
         />
         <CardTotal
-            title="Total Balance"
+            title="Загальний баланс"
             sum={7600.34}
             variant={CardVariant.VIOLET}
         />
@@ -39,22 +39,22 @@ const CardPart: React.FC = () => {
             <CodeHighlight code={codeExample} />
             <div className={styles.cardTotalContainer}>
                 <CardTotal
-                    title="Total Balance Total Balance Total Balance Total Balance Total Balance"
+                    title="Загальний баланс Загальний баланс Загальний баланс Загальний баланс Загальний баланс"
                     sum={40.45}
                     variant={CardVariant.ORANGE}
                 />
                 <CardTotal
-                    title="Total Period Change"
+                    title="Загальна зміна за період"
                     sum={504_000_000_000.549}
                     variant={CardVariant.BLUE}
                 />
                 <CardTotal
-                    title="Total Period Expenses"
+                    title="Загальні витрати за період"
                     sum={-9700.34}
                     variant={CardVariant.WHITE}
                 />
                 <CardTotal
-                    title="Total Balance"
+                    title="Загальний баланс"
                     sum={7600.34}
                     variant={CardVariant.VIOLET}
                 />

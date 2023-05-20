@@ -130,7 +130,7 @@ const TransactionModalBody: React.FC<Properties> = ({
 
     return (
         <div className={styles.body}>
-            <TransactionModalElement label="Category">
+            <TransactionModalElement label="Категорія">
                 <Dropdown
                     data={data as unknown as DataType[]}
                     formatOptionLabel={FormatOptionLabel}
@@ -138,24 +138,24 @@ const TransactionModalBody: React.FC<Properties> = ({
                     handleChange={handleDropdownChangeCategory}
                 />
             </TransactionModalElement>
-            <TransactionModalElement label="Date">
+            <TransactionModalElement label="Дата">
                 <Calendar
                     isRangeCalendar={false}
                     onChange={handleChangeTransaction}
                 />
             </TransactionModalElement>
-            <TransactionModalElement label="Note">
+            <TransactionModalElement label="Примітка">
                 <Input
                     inputClassName={styles.note}
                     type={InputType.TEXT}
-                    placeholder="Write note"
+                    placeholder="Написати примітку"
                     name="note"
                     control={control}
                     errors={errors}
                     onChange={handleNoteChange}
                 />
             </TransactionModalElement>
-            <TransactionModalElement label="Amount">
+            <TransactionModalElement label="Сума">
                 <Input
                     inputClassName={styles.amount}
                     type={InputType.TEXT}

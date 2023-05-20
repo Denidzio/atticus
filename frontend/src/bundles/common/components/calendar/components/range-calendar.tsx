@@ -1,6 +1,7 @@
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
+import uk from 'date-fns/locale/uk';
 import React, { useState } from 'react';
 import { type Range, type RangeKeyDict } from 'react-date-range';
 import { DateRange } from 'react-date-range';
@@ -125,6 +126,7 @@ const RangeCalendar: React.FC<MyComponentProperties> = ({
                             months={2}
                             moveRangeOnFirstSelection={false}
                             direction="vertical"
+                            locale={uk}
                         />
                         <Button
                             className={styles.button}
@@ -132,7 +134,7 @@ const RangeCalendar: React.FC<MyComponentProperties> = ({
                             size={ButtonSize.SMALL}
                             onClick={handleClick}
                         >
-                            Select
+                            Вибрати
                         </Button>
                     </div>
                 </>

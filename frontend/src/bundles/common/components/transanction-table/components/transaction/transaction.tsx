@@ -100,7 +100,7 @@ const Transaction: React.FC<Properties> = ({
                         <div className={styles.inDays}>
                             <span>{transaction.date}</span>
                             <span className={styles.totals}>
-                                in {getDaysLeft([transaction])} days
+                                через {getDaysLeft([transaction])} дні
                             </span>
                         </div>
                     ) : (

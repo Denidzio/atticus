@@ -84,7 +84,7 @@ const CategoriesSettings: React.FC = () => {
         <div className={styles.section}>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                    <h1 className={styles.title}>Create a new category</h1>
+                    <h1 className={styles.title}>Створити нову категорію</h1>
                     <div>
                         <FormUiStub
                             onClick={handleClickModalCreate}
@@ -110,13 +110,13 @@ const CategoriesSettings: React.FC = () => {
                             setSelectedCategories={setIsSelectedCategories}
                         />
                         <CategoryList
-                            title={'Income Categories'}
+                            title="Категорії доходу"
                             categories={categories.income}
                             addIdCheckedCategories={addIdCheckedCategories}
                             count={countTransaction}
                         />
                         <CategoryList
-                            title={'Expense Categories'}
+                            title="Категорії витрат"
                             categories={categories.expense}
                             addIdCheckedCategories={addIdCheckedCategories}
                             count={countTransaction}
@@ -134,7 +134,7 @@ const CategoriesSettings: React.FC = () => {
                         isCreateModalShown={isCreateModalShown}
                     />
                 }
-                submitButtonName={'Edit category'}
+                submitButtonName="Редагувати категорію"
                 hasActionButtons={false}
             />
         </div>

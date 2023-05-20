@@ -63,7 +63,7 @@ const Auth: React.FC = () => {
                     <span className={styles.authRoundsmall}></span>
                     <span className={styles.authRing}></span>
                     {dataStatus === DataStatus.PENDING ? (
-                        <Loader />
+                        <Loader white />
                     ) : (
                         <AuthWrapper
                             authPath={authPath}
